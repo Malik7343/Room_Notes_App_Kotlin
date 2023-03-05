@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:background="@drawable/bottom_bar"
+    android:elevation="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+
+        <TextView
+            android:id="@+id/title_note"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Title"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginHorizontal="12dp"
+            android:padding="12dp"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/content_notes"
+            android:layout_width="0dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:padding="12dp"
+            tools:text="content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintTop_toBottomOf="@id/title_note"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="12dp"
+
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/date_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textSize="8dp"
+            tools:text="Date"
+            app:layout_constraintTop_toBottomOf="@id/content_notes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

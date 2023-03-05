@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_garph"
+    app:startDestination="@id/notesFragment">
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.example.roomnotesapp.ui.NotesFragment"
+        android:label="fragment_notes"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_notesFragment_to_addEditNotesFragment"
+            app:destination="@id/addEditNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditNotesFragment"
+        android:name="com.example.roomnotesapp.ui.AddEditNotesFragment"
+        android:label="AddEditNotesFragment"
+        tools:layout="@layout/fragment_addeditnotes">
+        <action
+            android:id="@+id/action_addEditNotesFragment_to_notesFragment"
+            app:destination="@id/notesFragment"
+            app:popUpTo="@id/notesFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="notes"
+            app:argType="com.example.roomnotesapp.data.entity.Notes"
+            app:nullable="true" />
+    </fragment>
+</navigation>
